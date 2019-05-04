@@ -9,8 +9,8 @@ const pickedHeaders = ['accept-encoding', 'accept-language', 'accept', 'cookie']
 export default new Service({
   routes: {
     rewrite: async (ctx: ServiceContext) => {
-      const {req, vtex: { account, operationId }} = ctx
-      const host = `${account}.myvtex.com`
+      const {req, vtex: { account, workspace, operationId }} = ctx
+      const host = `${workspace}--${account}.myvtex.com`
 
       const options = {
         headers: {
