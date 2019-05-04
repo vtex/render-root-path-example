@@ -1,0 +1,25 @@
+{
+  "name": "render-root-path-example",
+  "vendor": "vtex",
+  "version": "0.0.3",
+  "title": "Render Root Path Feature Example",
+  "description": "Reference app for root path feature implementation. This shows how a CDN should perform host and path rewriting.",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "4.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 20,
+  "minReplicas": 1,
+  "maxReplicas": 4,
+  "routes": {
+    "rewrite": {
+      "path": "/ar/*path",
+      "public": true
+    }
+  }
+}
