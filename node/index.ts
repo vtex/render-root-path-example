@@ -36,7 +36,7 @@ export default new Service({
         })
 
         proxyReq.on('error', reject)
-        proxyReq.end()
+        req.pipe(proxyReq)
 
         // Don't cache errors if request fails
         ctx.set('cache-control', 'private, no-cache')
