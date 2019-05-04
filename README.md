@@ -6,11 +6,11 @@ Reference app for root path feature implementation. This shows how a CDN should 
 
 If your main domain is served by a different platform or system and you want to scope a VTEX IO store in a fixed path prefix, you can use the Root Path feature.
 
-For example, given a domain `mybrand.com`, if you want to serve your store under `mybrand.com/ar`, you must configure your CDN to:
+For example, given a domain `mybrand.com`, if you want to serve your store under `mybrand.com/ar`, you must:
 
 1 - Create a public domain for your account and add it to License Manager, e.g. `mybrand.com.ar`.
 
-2 - For all requests to `mybrand.com/ar`:
+2 - For all requests to `mybrand.com/ar`, configure your CDN to:
 
   2.1 - Rewrite the `Host` header to `mybrand.com.ar`.
 
