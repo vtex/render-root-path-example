@@ -16,12 +16,14 @@ export default new Service({
         headers: {
           ...pick(pickedHeaders, req.headers),
           host,
+          'x-forwarded-proto': 'https',
           'x-vtex-operation-id': operationId,
           'x-vtex-root-path': rootPath,
+          'x-vtex-use-https': 'true',
         },
         hostname: host,
         method: req.method,
-        path: req.url!.replace(rootPath, '/'),
+        path: req.url!.replace(rootPath, '') || '/',
       }
 
       console.log('Proxying request:', options)
