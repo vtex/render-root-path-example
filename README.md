@@ -1,6 +1,6 @@
 # Render Root Path Feature Example
 
-Reference app for root path feature implementation. This shows how a CDN should perform host and path rewriting.
+Reference app for root path feature implementation. This shows how a reverse proxy should perform host and path rewriting.
 
 ## How root path support works in Render
 
@@ -10,7 +10,7 @@ For example, given a domain `mybrand.com`, if you want to serve your store under
 
 1 - Create a public domain for your account and add it to License Manager, e.g. `mybrand.com.ar`.
 
-2 - For all requests to `mybrand.com/ar`, configure your CDN to:
+2 - For all requests to `mybrand.com/ar`, configure your reverse proxy to:
 
   2.1 - Rewrite the `Host` header to `mybrand.com.ar`.
 
